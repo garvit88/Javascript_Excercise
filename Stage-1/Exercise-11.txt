@@ -1,0 +1,123 @@
+Link : https://www.w3schools.com/js/js_break.asp
+
+// Ex - 1
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var text = "";
+var i;
+for (i = 1; i < 10; i++) {
+    if (i === 5) 
+    	break;
+    document.getElementById("demo").innerHTML += i + "<br>";
+}
+</script>
+
+</body>
+</html>
+
+// Ex - 2
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var text = "";
+var i;
+for (i = 1; i < 10; i++) {
+    if (i === 5) 
+    	continue;
+    document.getElementById("demo").innerHTML += i + "<br>";
+}
+</script>
+
+</body>
+</html>
+
+// Ex - 3
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var text = "";
+var i;
+for (i = 1; i < 10; i++) {
+    if (i === 5 || i === 7) 
+    	continue;
+    document.getElementById("demo").innerHTML += i + "<br>";
+}
+</script>
+
+</body>
+</html>
+
+// Ex - 4
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<input id="myInput" type="text" value="BMW">
+<button onclick="checkCar()">Check Car</button>
+<p id="demo"></p>
+
+<script>
+function checkCar() {
+  var text;
+  var favCar = document.getElementById("myInput").value;
+
+  switch(favCar) {
+    case "BMW":
+      text = "German car";
+      break;      
+    case "Ford":
+      text = "American car";
+      break;      
+    case "Peugeot":
+      text = "French car";
+      break;
+    default:
+      text = "Unknown car name";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>
+
+// Ex - 5
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var cars = ["BMW", "Volvo", "Saab", "Ford"];
+var text = ""
+var i;
+for (i = 0; i < cars.length; i++) {
+    if (cars[i] === "Saab") 
+    	continue;
+    text += cars[i] + "<br>";
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>
+

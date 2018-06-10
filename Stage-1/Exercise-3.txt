@@ -1,0 +1,55 @@
+Link : http://www.ibm.com/developerworks/library/wa-objects-pr/
+
+// Ex - 1 : Create objects using the Object function
+
+<html>
+<head>
+	<meta charset="utf-8">
+<script>
+var person = new Object();
+person.name = "Garvit";
+person.getName = function() {
+	return person.name;
+}
+console.log(person.getName());
+</script>
+</head>
+</html>
+
+// Ex -2 : Create objects using literal notation
+
+<html>
+<head>
+	<meta charset="utf-8">
+<script>
+var person = { 
+	name:"Garvit", 
+	getName:function() {
+		return this.name;
+	}
+}
+console.log(person.getName());
+</script>
+</head>
+</html>
+
+// Ex - 3 : Create objects using the object constructor and prototypes 
+
+<html>
+<head>
+	<meta charset="utf-8">
+<script>
+function Person(name) {
+    this.name = name;
+}
+Person.prototype.getName = function() {
+	return this.name;
+}
+
+var p = new Person("Garvit");
+var p1 = new Person("someone");
+
+console.log(p.getName());
+</script>
+</head>
+</html>

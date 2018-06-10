@@ -1,0 +1,123 @@
+Link : http://www.w3schools.com/js/js_if_else.asp
+
+// Ex - 1
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+if (5 > 2) {
+    document.getElementById("demo").innerHTML = "Well done!";
+}
+</script>
+
+</body>
+</html>
+
+// Ex - 2
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo">Display the result here.</p>
+
+<script>
+if(10 > 5) {
+document.getElementById("demo").innerHTML = "I did it!";
+}
+
+</script>
+
+</body>
+</html>
+
+// Ex - 3
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var firstName = "John";
+
+if (firstName === "John") {
+    document.getElementById("demo").innerHTML = "Hello John!";
+}
+</script>
+
+</body>
+</html>
+
+// Ex - 4
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo">Display the result here.</p>
+
+<script>
+var firstName = "Greg";
+
+if (firstName === "John") {
+    document.getElementById("demo").innerHTML = "Hello John!";
+} else {
+    document.getElementById("demo").innerHTML = "You're not John!";
+}
+</script>
+
+</body>
+</html>
+
+// Ex - 5
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo">Display the result here.</p>
+
+<script>
+var age = 25;
+
+if(age > 18) {
+	document.getElementById("demo").innerHTML = "Old enough";
+}
+else {
+	document.getElementById("demo").innerHTML = "Too young";
+}
+</script>
+
+</body>
+</html>
+
+// Ex - 6
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo">Display the result here.</p>
+
+<script>
+var greeting;
+var hour = new Date().getHours();
+
+if (hour < 18) {
+    greeting = "Good day";
+}
+else {
+    greeting = "Good evening";
+}
+
+document.getElementById("demo").innerHTML = greeting;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+Link : https://www.w3schools.com/js/js_functions.asp
+
+// Ex - 1
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    document.getElementById("demo").innerHTML = "Hello World!";
+}
+myFunction();
+</script>
+
+</body>
+</html>
+
+// Ex - 2
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+function myFunc() {
+    document.getElementById("demo").innerHTML = "Hello World!";
+}
+myFunc();
+</script>
+
+</body>
+</html>
+
+// Ex - 3
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    return 5 * 5;
+}
+document.getElementById("demo").innerHTML = myFunction();
+</script>
+
+</body>
+</html>
+
+// Ex - 4
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo">Display the result here.</p>
+
+<script>
+function myFunction(name) {
+    return "Hello " + name;
+}
+document.getElementById("demo").innerHTML = myFunction("John");
+</script>
+
+</body>
+</html>
+
+// Ex - 5
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo">Display the result here.</p>
+
+<script>
+function myFunction() {
+    document.getElementById("demo").innerHTML = "Hello World!";
+}
+myFunction();
+</script>
+
+</body>
+</html>

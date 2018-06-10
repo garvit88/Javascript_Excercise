@@ -1,0 +1,100 @@
+Link : https://www.teaching-materials.org/javascript/exercises/functions.html
+
+// Ex - 1
+
+<html>
+<head>
+	<meta charset="utf-8">
+<script>
+function tellFortune(jobTitle, geoLocation, partner, noKids) {
+    var future = 'You will be a ' + jobTitle + ' in ' + geoLocation + ' and married to ' +
+   	partner + ' ' + ' with ' + noKids + ' kids.';
+    console.log(future);
+}
+
+tellFortune('Bussiness man', 'Delhi', 'someone', 1);
+tellFortune('Full Stack Developer', 'Bangalore', 'someone', 2);
+</script>
+</head>
+</html>
+
+// Ex - 2
+
+<html>
+<head>
+	<meta charset="utf-8">
+<script>
+function calculate(age) {
+    var dogYears = 7*age;
+    console.log("Your doggie is " + dogYears + " years old in dog years!");
+}
+calculate(1);
+calculate(2);
+calculate(3);
+</script>
+</head>
+</html>
+
+// Ex - 3
+
+<html>
+<head>
+	<meta charset="utf-8">
+<script>
+function calculateSupply(age, amount) {
+  var maxAge = 100;
+  var totalNeeded = (amount * 365) * (maxAge - age);
+  var message = 'You will need ' + totalNeeded + ' cups of tea to last you until the ripe old age of ' + maxAge;
+  console.log(message);
+}
+
+calculateSupply(21, 5);
+calculateSupply(21, 10);
+calculateSupply(21, 15);
+</script>
+</head>
+</html>
+
+// Ex - 4
+
+<html>
+<head>
+	<meta charset="utf-8">
+<script>
+const PI= 3.14;
+function calcCircumference(radius){
+	var circumference = 2*PI*radius;
+	console.log("The circumference is "+circumference);
+}
+
+function calcArea(radius){
+	area = PI*radius*radius;
+	console.log("The area is "+area);
+}
+
+calcCircumference(5);
+calcArea(5);
+</script>
+</head>
+</html>
+
+// Ex - 5
+
+<html>
+<head>
+	<meta charset="utf-8">
+<script>
+function celsiusToFahrenheit(celsius) {
+  var far = (celsius*9)/5 + 32;
+  console.log(celsius + ' C is ' + far + ' F');
+}
+
+function fahrenheitToCelsius(fahrenheit) {
+  var cel = ((fahrenheit - 32)*5)/9;
+  console.log(fahrenheit + ' F is ' + cel + ' C');
+}
+celsiusToFahrenheit(28);
+fahrenheitToCelsius(60);
+</script>
+</head>
+</html>

@@ -1,0 +1,118 @@
+Link : https://www.w3schools.com/js/js_loop_for.asp
+
+// Ex - 1
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var i;
+for (i = 0; i < 10; i++) {
+    document.getElementById("demo").innerHTML += i + "<br>";
+}
+</script>
+
+</body>
+</html>
+
+// Ex - 2
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var i;
+for (i = 5; i < 10; i++) {
+    document.getElementById("demo").innerHTML += i + "<br>";
+}
+</script>
+
+</body>
+</html>
+
+// Ex - 3
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var i;
+for (i = 5; i <= 50; i + = 5) {
+    document.getElementById("demo").innerHTML += i + "<br>";
+}
+</script>
+
+</body>
+</html>
+
+// Ex - 4
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var i;
+for (i = 10; i > 0; i--) {
+    document.getElementById("demo").innerHTML += i + "<br>";
+}
+</script>
+
+</body>
+</html>
+
+// Ex - 5
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var text = "";
+var food = ["Pizza", "Beans", "Tacos", "Fish", "Chicken"];
+var i;
+
+for (i = 0; i < food.length; i++) {
+    text += "I love " + food[i] + "<br>";
+}
+
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>
+
+// Ex - 6
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var text = "";
+var i;
+
+for (i = 1; i < 10; i = i + 2) {
+    text += i + "<br>";
+}
+
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>
