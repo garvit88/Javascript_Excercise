@@ -1,0 +1,98 @@
+Link : https://www.w3schools.com/jS/js_string_methods.asp
+
+// Ex - 1
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var txt = "Hello World";
+document.getElementById("demo").innerHTML = txt.indexOf("World");
+</script>
+
+</body>
+</html>
+
+// Ex - 2
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var str = "Apple,Banana,Kiwi";
+document.getElementById("demo").innerHTML = str.slice(6);
+</script>
+
+</body>
+</html>
+
+// Ex - 3
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var txt = "Hello World";
+document.getElementById("demo").innerHTML = txt.replace("World","Universe");
+</script>
+
+</body>
+</html>
+
+// Ex - 4
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var txt = "Hello World";
+document.getElementById("demo").innerHTML = txt.toUpperCase();
+</script>
+
+</body>
+</html>
+
+// Ex - 5
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var txt = "Hello World";
+document.getElementById("demo").innerHTML = txt.toLowerCase();
+</script>
+
+</body>
+</html>
+
+// Ex - 6
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo">Display the result here.</p>
+
+<script>
+var str1 = "Hello ";
+var str2 = "World!";
+document.getElementById("demo").innerHTML = str1.concat(str2);
+</script>
+
+</body>
+</html>

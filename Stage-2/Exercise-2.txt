@@ -1,0 +1,70 @@
+Link : https://www.w3schools.com/js/js_array_methods.asp
+
+// Ex - 1
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p> 
+
+<script>
+var fruits = ["Banana", "Orange", "Apple"];
+fruits.pop();
+document.getElementById("demo").innerHTML = fruits;
+</script>
+
+</body>
+</html>
+
+// Ex - 2
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p> 
+
+<script>
+var fruits = ["Banana", "Orange", "Apple"];
+fruits.push("Kiwi");
+document.getElementById("demo").innerHTML = fruits;
+</script>
+
+</body>
+</html>
+
+// Ex - 3
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p> 
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Kiwi"];
+fruits.splice(1, 2);
+document.getElementById("demo").innerHTML = fruits;
+</script>
+
+</body>
+</html>
+
+// Ex - 4
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p> 
+
+<script>
+var girls = ["Cecilie", "Lone"];
+var boys = ["Emil", "Tobias", "Linus"];
+var children = girls.concat(boys);
+document.getElementById("demo").innerHTML = children;
+</script>
+
+</body>
+</html>

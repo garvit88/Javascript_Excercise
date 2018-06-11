@@ -1,0 +1,18 @@
+Link : https://www.w3schools.com/js/js_array_sort.asp
+
+// Ex - 1
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p> 
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Kiwi"];
+fruits.sort();
+document.getElementById("demo").innerHTML = fruits;
+</script>
+
+</body>
+</html>
