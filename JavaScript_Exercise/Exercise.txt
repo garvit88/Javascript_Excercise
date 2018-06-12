@@ -1,0 +1,383 @@
+// Q - 1 : Write a JavaScript program to display the current day and time in the following format mm/dd/yyyy?
+
+function display() {
+  var a = new Date();
+  date = a.getDate();
+  month = a.getMonth();
+  year = a.getFullYear();
+  console.log([month, date, year].join("/"));
+}
+
+display();
+
+OUTPUT : 
+5/12/2018
+
+// Q - 2 : Write a JavaScript conditional statement to find the largest of five numbers?
+
+var a = 1;
+var b = 2;
+var c = 3;
+var d = 4;
+var e = 5;
+
+if(a > b && a > c && a > d && a > e) {
+  console.log(a);
+} 
+else if(b > a && b > c && b > d && b > e) {
+  console.log(b);
+}
+else if(c > b && c > a && c > d && c > e) {
+  console.log(c);
+}
+else if(d > b && d > c && d > a && d > e) {
+  console.log(d);
+}
+else if(e > a && e > b && e > c && e > d) {
+  console.log(e);
+}
+
+OUTPUT:
+5
+
+// Q - 3 : Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8?
+
+function example(input){
+var arr = [];
+for(var i = 0; i < input.length; i++) {
+if((input[i] % 2 === 0) && input[i+1] % 2 === 0){
+arr.push(input[i] + '-' )
+}
+else {
+  arr.push(input[i]);
+}
+}
+return arr.join('');
+}
+console.log(example('025468'));
+
+OUTPUT:
+0-254-6-8
+
+// Q - 4 : Write a JavaScript program to sort strings items of an array in both alphabetically ascending and descending order?
+
+var a = ["abc","def","pqr"];
+console.log("Ascending: " + a.sort());
+
+console.log("Descending: " + a.sort(function(a, b) {
+  if(a>b) {
+    return -1;
+  }
+  else {
+    return 1;
+  }
+;}))
+
+OUTPUT:
+Ascending: abc,def,pqr
+Descending: pqr,def,abc
+
+// Q - 5 : Write a JavaScript program to remove duplicate items from an array?
+
+var Mynum = [1, 2, 2, 4, 5, 4, 7, 8, 7, 3, 6];
+result = removeDuplicate(Mynum);
+console.log(result);
+
+function removeDuplicate(input) {
+  input.sort();
+  for(var i=0;i<input.length;i++) {
+    if(input[i] == input[i+1]) {
+      input.splice(i,1);
+      removeDuplicate(input);
+    }
+  }
+  return input;
+}
+
+OUTPUT:
+[ 1, 2, 3, 4, 5, 6, 7, 8 ]
+
+// Q - 6 : Write a JavaScript function to find the difference of two arrays?
+
+function differenceOf2Arrays (array1, array2) {
+var temp = [];
+array1 = array1.toString().split(',').map(Number);
+array2 = array2.toString().split(',').map(Number);
+
+for (var i in array1) {
+if(array2.indexOf(array1[i]) === -1) {
+  temp.push(array1[i]);
+}
+}
+for(i in array2) {
+if(array1.indexOf(array2[i]) === -1) {
+  temp.push(array2[i]);
+}
+}
+return temp;
+}
+console.log(differenceOf2Arrays([1, 2, 3], [100, 2, 1, 10]));
+console.log(differenceOf2Arrays([1, 2, 3, 4, 5], [1, [2], [3, [[4]]],[5,6]]));
+
+OUTPUT:
+[ 3, 100, 10 ]
+[ 6 ]
+
+// Q - 7 : Write a JavaScript function to sort the following array of objects by title value?
+
+var library = [ 
+   { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254},
+   { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264},
+   { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245}
+   ];
+
+function compare(x,y) 
+ {
+  if (x.title < y.title)
+    return -1;
+  if (x.title > y.title)
+    return 1;
+  return 0;
+ }
+
+console.log(library.sort(compare));
+
+OUTPUT:
+[ { author: 'Suzanne Collins',
+    title: 'Mockingjay: The Final Book of The Hunger Games',
+    libraryID: 3245 },
+  { author: 'Bill Gates',
+    title: 'The Road Ahead',
+    libraryID: 1254 },
+  { author: 'Steve Jobs',
+    title: 'Walter Isaacson',
+    libraryID: 4264 } ]
+
+// Q - 8 : Write a pattern that matches e-mail addresses?
+
+function valid_email(str)
+{
+	var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;  
+	if(mailformat.test(str)) {  
+	console.log("Valid");  
+	}  
+	else {  
+	console.log("Invalid");  
+	}
+}
+valid_email("someone@gmail.com");
+
+OUTPUT:
+Valid
+
+// Q - 9 : Write a JavaScript program to list the properties of a JavaScript object?
+
+var string = "";
+var student = {
+name : "David Rayy",
+sclass : "VI",
+rollno : 12 
+};
+var a = [];
+for (var property in student) {
+  a.push(property);
+}
+console.log(a.join(","));
+
+OUTPUT:
+name,sclass,rollno
+
+// Q - 10 : Write a JavaScript program which compute, the average marks of the following students Then, this average is used to determine the corresponding grade?
+
+var students = [['David', 80], ['Vinoth', 77], ['Divya', 88], ['Ishitha', 95], ['Thomas', 68]];
+
+var total = 0;
+var avg = 0;
+for(var i of students) {
+  total += i[1];  
+}
+
+avg = total/students.length;
+console.log("Average Marks: " + avg);
+
+if (avg < 60){
+  console.log("Grade : F");      
+} 
+else if (avg < 70) {
+  console.log("Grade : D"); 
+} 
+else if (avg < 80) {
+  console.log("Grade : C"); 
+} 
+else if (avg < 90) {
+  console.log("Grade : B"); 
+} 
+else if (avg < 100) {
+  console.log("Grade : A"); 
+}
+
+OUTPUT:
+Average Marks: 81.6
+Grade : B
+
+// Q - 11 : Write a JavaScript function that returns a passed string    with letters in alphabetical order?
+
+var a = "webmaster";
+var arr = [];
+for(var i = 0 ; i < a.length; i++) {
+  arr[i] = a.charAt(i);
+}
+console.log(arr.sort().join(''));
+
+// Q - 12 : Write a JavaScript function that accepts two arguments,    a string and a letter and the function will    count the number of occurrences of the specified letter within the    string.
+
+function occurence(arr,letter) {
+  var count = 0;
+  for(var i of arr) {
+    if(i == letter) {
+      count++;
+    }
+  }
+  return count;
+}
+occurence("gmail.com","m");
+
+OUTPUT:
+2
+
+// Q - 13 : Flatten the following object:var myObj = [5, [22], [[14]], [[4]],[5,6]]
+
+function flatten(array1){
+array1 = array1.toString().split(',').map(Number); 
+return array1;
+}
+var arr = [5, [22], [[14]], [[4]],[5,6]];
+console.log(flatten(arr));
+
+OUTPUT:
+[ 5, 22, 14, 4, 5, 6 ]
+
+// Q - 14 : 
+
+Exercise 1: Display all objects with occupation as 'Programmer'
+
+var myObj =
+[{'name':'Saurabh', 'age': 30, 'occupation': "Team Leader"},
+{'name':'Anupriya', 'age': 32, 'occupation': "Team Leader"},
+{'name':'Kalyani', 'age': 25, 'occupation': "Programmer"},
+{'name':'Damodaran', 'age': 27, 'occupation': "Programmer"},
+{'name':'Krishnakath', 'age': 22, 'occupation': "Programmer"},
+{'name':'Venketraman', 'age': 28, 'occupation': "Programmer"}];
+
+for (var i of myObj)
+{
+ if(i['occupation']==['Programmer']) {
+ 	console.log(i);
+ }
+}
+
+OUTPUT:
+{ name: 'Kalyani', age: 25, occupation: 'Programmer' }
+{ name: 'Damodaran', age: 27, occupation: 'Programmer' }
+{ name: 'Krishnakath', age: 22, occupation: 'Programmer' }
+{ name: 'Venketraman', age: 28, occupation: 'Programmer' }
+
+Exercise 2: Sort the object basis the age key in the descending order
+
+var myObj =
+[{'name':'Saurabh', 'age': 30, 'occupation': "Team Leader"},
+{'name':'Anupriya', 'age': 32, 'occupation': "Team Leader"},
+{'name':'Kalyani', 'age': 25, 'occupation': "Programmer"},
+{'name':'Damodaran', 'age': 27, 'occupation': "Programmer"},
+{'name':'Krishnakath', 'age': 22, 'occupation': "Programmer"},
+{'name':'Venketraman', 'age': 28, 'occupation': "Programmer"}];
+
+myObj.sort(function(a,b){ return b.age-a.age});
+console.log(myObj);
+
+OUTPUT:
+[ { name: 'Anupriya', age: 32, occupation: 'Team Leader' },
+  { name: 'Saurabh', age: 30, occupation: 'Team Leader' },
+  { name: 'Venketraman', age: 28, occupation: 'Programmer' },
+  { name: 'Damodaran', age: 27, occupation: 'Programmer' },
+  { name: 'Kalyani', age: 25, occupation: 'Programmer' },
+  { name: 'Krishnakath', age: 22, occupation: 'Programmer' } ]
+
+Exercise 3: Recreate the above array of objects into the following object of objects :{ 'Team Leader' : [{'name':_____________, 'age':__________},{}], '<anotheroccupation>': [{'name':______________, 'age':________},{}]}
+
+var myObj =
+[{'name':'Saurabh', 'age': 30, 'occupation': "Team Leader"},
+{'name':'Anupriya', 'age': 32, 'occupation': "Team Leader"},
+{'name':'Kalyani', 'age': 25, 'occupation': "Programmer"},
+{'name':'Damodaran', 'age': 27, 'occupation': "Programmer"},
+{'name':'Krishnakath', 'age': 22, 'occupation': "Programmer"},
+{'name':'Venketraman', 'age': 28, 'occupation': "Programmer"}];
+
+var a={}
+for (var i of myObj){
+ 	a[i['occupation']]=[];
+}
+for (i of myObj) {
+ 	a[i['occupation']].push(i);
+}
+for (i in a){
+ 	for (var j of a[i]){
+   		delete j['occupation']
+ 	}
+}
+console.log(a);
+
+OUTPUT:
+
+{ 'Team Leader': [ { name: 'Saurabh', age: 30 }, { name: 'Anupriya', age: 32 } ],
+  Programmer: 
+   [ { name: 'Kalyani', age: 25 },
+     { name: 'Damodaran', age: 27 },
+     { name: 'Krishnakath', age: 22 },
+     { name: 'Venketraman', age: 28 } ] }
+
+Exercise 4: Use the map function to create a new array containing only names present in myObj.
+
+var myObj =
+[{'name':'Saurabh', 'age': 30, 'occupation': "Team Leader"},
+{'name':'Anupriya', 'age': 32, 'occupation': "Team Leader"},
+{'name':'Kalyani', 'age': 25, 'occupation': "Programmer"},
+{'name':'Damodaran', 'age': 27, 'occupation': "Programmer"},
+{'name':'Krishnakath', 'age': 22, 'occupation': "Programmer"},
+{'name':'Venketraman', 'age': 28, 'occupation': "Programmer"}];
+
+function getName(item, i) {
+   var fullname = item.name;
+   return fullname;
+}
+console.log(myObj.map(getName))
+
+OUTPUT:
+[ 'Saurabh',
+  'Anupriya',
+  'Kalyani',
+  'Damodaran',
+  'Krishnakath',
+  'Venketraman' ]
+
+// Q - 15 : Convert the following JSON string to an object and access the value of the jason property.
+
+var jsonStr = '{"mike":"Book","jason":"sweater","chels":"iPad"}';
+var json = JSON.parse(jsonStr);
+console.log(json.jason);
+
+OUTPUT:
+sweater
+
+// Q - 16 : Convert it into JavaScript array like: ["1","2","3","4"]
+
+var obj = {
+"One":"1",
+"Two":"2",
+"Three":"3",
+"Four":"4"
+}
+console.log(Object.values(obj));
+
+OUTPUT:
+[ '1', '2', '3', '4' ]
