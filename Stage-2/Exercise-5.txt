@@ -1,1 +1,176 @@
-strings
+Link : https://www.w3resource.com/javascript-exercises/javascript-string-exercises.php
+
+// Ex - 3
+
+string_to_array = function (str) {
+     return str.split(" ");
+};
+console.log(string_to_array("Robin Singh"));
+
+// Ex - 5
+
+abbrev_name = function (str1) {
+    var split_names = str1.split(" ");
+    if (split_names.length > 1) {
+        return (split_names[0] + " " + split_names[1].charAt(0) + ".");
+    }
+    return split_names;
+};
+console.log(abbrev_name("Robin Singh"));
+
+// Ex - 6
+
+protect_email = function (user_email) {
+    var avg, splitted, part1, part2;
+    splitted = user_email.split("@");
+    part1 = splitted[0];
+    avg = part1.length / 2;
+    part1 = part1.substring(0, avg);
+    part2 = splitted[1];
+    return part1 + "...@" + part2;
+};
+
+console.log(protect_email("robin_singh@example.com"));
+
+// Ex - 7
+
+function string_parameterize(str) {
+  var lower = str.toLowerCase();
+  var spl = lower.split(" ");
+  console.log(spl);
+  var str1 = "";
+  for(var i in spl) {
+    if(i < spl.length-1) {
+      str1 += spl[i] + "-";
+    }
+    else {
+      str1 += spl[i];
+    }
+  }
+  return str1;
+}
+
+console.log(string_parameterize("Robin Singh from USA"));
+
+// Ex - 10
+
+function swapcase(str) {
+  var str1 = "";
+  for(var i in str) {
+    if(str.charAt(i) == str.charAt(i).toUpperCase()) {
+      str1 += str.charAt(i).toLowerCase();
+    }
+    else if(str.charAt(i) == str.charAt(i).toLowerCase()) {
+      str1 += str.charAt(i).toUpperCase();
+    }
+  }
+  return str1;
+}
+console.log(swapcase('AaBbc'));
+
+// Ex - 12
+
+-------check
+
+function uncamelize(str, separator) {
+  var str1 = "";
+  for(var i in str) {
+    if(str.charAt(i) == str.charAt(i).toUpperCase()) {
+        str1 += str.charAt(i).toLowerCase();
+    }
+    else {
+      str1 += str.charAt(i);
+    }
+    
+}
+return str1;
+}
+console.log(uncamelize('helloWorld'));
+console.log(uncamelize('helloWorld','-'));
+console.log(uncamelize('helloWorld','_'));
+
+
+// Ex - 13
+
+function repeat(str, count) {
+    if(typeof(count) == "undefined") {
+    count =1;
+    }
+return count < 1 ? '' : new Array(count + 1).join(str);
+}
+console.log(repeat('Ha!'));
+console.log(repeat('Ha!',2));
+console.log(repeat('Ha!',3));
+
+// Ex - 16
+
+truncate = function(str, length, ending) {
+    if (length == null) {
+      length = 100;
+    }
+    if (ending == null) {
+      ending = '...';
+    }
+    if (str.length > length) {
+      return str.substring(0, length - ending.length) + ending;
+    } else {
+      return str;
+    }
+  };
+console.log(truncate('We are doing JS string exercises.'));
+console.log(truncate('We are doing JS string exercises.',19));
+console.log(truncate('We are doing JS string exercises.',15,'!!'));
+
+// Ex - 23
+
+function strip(str) {
+    return str.trim();
+}
+
+console.log(strip('w3resource '));
+console.log(strip(' w3resource'));
+console.log(strip(' w3resource  '));
+
+// Ex - 27
+
+function ascii_to_hexa(str)
+  {
+	var arr1 = [];
+	for (var n = 0, l = str.length; n < l; n ++) 
+     {
+		var hex = Number(str.charCodeAt(n)).toString(16);
+		arr1.push(hex);
+	 }
+	return arr1.join('');
+   }
+
+console.log(ascii_to_hexa('12'));
+console.log(ascii_to_hexa('100'));
+
+// Ex - 33
+
+function remove_non_word (str) {
+    if ((str===null) || (str===''))
+       return false;
+ else
+   str = str.toString();
+  
+var PATTERN = /[^\x20\x2D0-9A-Z\x5Fa-z\xC0-\xD6\xD8-\xF6\xF8-\xFF]/g;
+  
+  return str.replace(PATTERN, '');
+}
+console.log(remove_non_word('PHP ~!@#$%^&*()+`-={}[]|\\:";\'/?><., MySQL'));
+
+
+// Ex - 35
+
+function strip_html_tags(str)
+{
+   if ((str===null) || (str===''))
+       return false;
+  else
+   str = str.toString();
+  return str.replace(/<[^>]*>/g, '');
+}
+
+console.log(strip_html_tags('<html>PHP Exercises'));
